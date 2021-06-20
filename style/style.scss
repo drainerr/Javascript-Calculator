@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'DS-DIGI';
+    src: url(/fonts/DS-DIGI.TTF);
+}
+body{
+    box-sizing: border-box;
+    display:flex;
+    justify-content: center;
+    height:100%;
+    background: #3a6186;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89253e, #3a6186);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89253e, #3a6186); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    #calculator{
+        top:50%;
+        position:absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background-color:lightsteelblue;
+        border-radius:10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;        border:solid;
+        .row{
+            font-size:0;
+            background-color:black;
+            button{
+                margin:0;
+                padding:0;
+                height:4em;
+                width:4em;
+                border-radius:5px;
+                cursor:pointer;
+                margin:1px;
+                font-family: 'DS-DIGI';
+                font-weight: bold;
+                &:active{
+                    transition:ease-in-out;
+                    background-color:palevioletred;
+                }
+                &:hover{
+                    border-color:gold;
+                    transition:ease-in-out;
+                    border-width:3px;
+                    transition:.2s;
+                }
+            }
+        }
+        #display{
+            height:10vh;
+            border:solid;
+            font-size:1.4em;
+            font-weight:bold;
+            font-family: 'DS-DIGI';
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right:5px;
+            border-top-left-radius:12px;
+            border-top-right-radius:12px;
+        }
+        #add,#divide,#multiply,#subtract,#decimal{
+            background-color:gray;
+            color:whitesmoke;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+            &:active{
+                transition:ease-in-out;
+                background-color:orange;
+            }
+        }
+        #decimal,#clear{
+            font-weight: bold;
+        }
+        #equals{
+            height:3.7em;
+            width:100%;
+            border-bottom-left-radius:5px;
+            border-bottom-right-radius:5px;
+            border:solid;
+            cursor:pointer;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            &:active{
+                transition:ease-in-out;
+                background-color:palevioletred;
+            }
+            &:hover{
+                border-color:gold;
+                border-width:3px;
+                transition:.3s;
+            }
+        }
+        #clear{
+            background-color:palevioletred;
+        }
+        #zero{
+            background-color:whitesmoke;
+            font-weight: bold;
+            &:active{
+                transition:ease-in-out;
+                background-color:rgb(78, 74, 74);
+                color:whitesmoke;
+            }
+        }
+       
+    }/*#credits{
+        color:whitesmoke;
+        font-family: 'Orbitron', sans-serif;   
+    }*/
+}
