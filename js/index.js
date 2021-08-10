@@ -5,12 +5,13 @@ var getNum = () =>{
     var key = event.target.innerText;
     print(key);
 }
-
+display.innerHTML = '0';
 var print = (value) =>{
     
     if(display.innerHTML == '0'){
-        display.innerHTML = '';
         if(!isNaN(value) || value == '-')
+        display.innerHTML = '';
+        if(value != '=' && value != 'C')
         display.innerHTML += value;
     
     } else{
